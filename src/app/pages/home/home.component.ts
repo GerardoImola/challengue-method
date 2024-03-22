@@ -1,12 +1,15 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {MatButton} from "@angular/material/button";
+import {ListMovieComponent} from "../../components/list-movie/list-movie.component";
 
 @Component({
-  selector: 'app-home',
+  selector: 'app-index',
   standalone: true,
-  imports: [],
+  imports: [
+    MatButton, ListMovieComponent
+  ],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+  styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
-
 }

@@ -1,0 +1,45 @@
+.detail-container {
+  width: 90vw;
+padding-left: 5%;
+  h1 {
+    font-family: var(--font-family-inter);
+  }
+
+  table {
+    width: 100%;
+    font-family: var(--font-family-inter);
+    letter-spacing: 0;
+    margin-bottom: 20px;
+  }
+
+  .mat-mdc-form-field {
+    width: 100%;
+  }
+
+  td, th {
+    width: 25%;
+    font-family: var(--font-family-inter);
+  }
+
+  .table-td-title {
+    cursor: pointer;
+  }
+
+  .table-td-poster {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100px;
+  }
+
+  .table-no-result {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 400px)  {
+  td, th {
+    padding: 0px 0px 0px 3px;
+  }
+}
+

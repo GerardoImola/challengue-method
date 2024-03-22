@@ -1,0 +1,42 @@
+<div class="movie-container">
+  @if(isLoadingResults) {
+  <div class="movie-container-skeleton">
+  <app-skeleton-loading/>
+  </div>
+  }
+  @else {
+  <div>
+  <div class="movie-container-title">
+    <div>
+      <h1>{{movieData.original_title}}</h1>
+    </div>
+  </div>
+  <mat-card class="movie-container-card">
+    <div class="movie-container-card-wrapper-img">
+      <img mat-card-image src="{{'https://image.tmdb.org/t/p/w500' + movieData.poster_path}}"
+
+      alt="Movie background image" class="movie-container-card-wrapper-img-bg-image">
+      <img mat-card-image src="{{'https://image.tmdb.org/t/p/w500' + movieData.poster_path}}"
+           alt="Movie image"  class="movie-container-card-wrapper-img-image">
+    </div>
+    <mat-card-content class="movie-container-card-content">
+      <div class="movie-container-card-content-header">
+        <mat-chip selected >
+            <span>{{movieData.vote_average}}</span>
+        </mat-chip>
+        <span>{{movieData.release_date}}</span>
+      </div>
+      <p>
+        {{movieData.overview}}
+      </p>
+
+
+    </mat-card-content>
+  </mat-card>
+</div>
+<div class="center-content">
+  <button (click)="onGoBack()">Go back</button>
+</div>
+}
+</div>
+

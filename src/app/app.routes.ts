@@ -1,8 +1,13 @@
 import { Routes } from '@angular/router';
-import {ROUTE_HOME_RELATIVE} from "./shared/routing-paths";
 
 export const routes: Routes = [
   {
-    path: ROUTE_HOME_RELATIVE,
+    path: '',
     loadComponent: () => import('./pages/home/home.component').then((m) => m.HomeComponent),
-  },];
+  },
+
+  {
+    path: 'movie/:id',
+    loadComponent: () => import('./components/movie/movie.component').then(m => m.MovieComponent),
+  },
+];

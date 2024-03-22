@@ -31,4 +31,7 @@ export interface AddMovieFormI {
   overview: string;
   voteAverage: string;
   releaseDate: string;
+
 }
+
+
